@@ -13,11 +13,11 @@ install/ using:
 
 sudo ldislocker-gui.py $USER
 
-script 
+Script can use one parameter - username. The mounted disk rights will be set for the user.
 
 ## or install:
 
-git clone
+git clone https://github.com/zsloupensky/ldislocker-gui.git
 
 cd ldislocker-gui
 
