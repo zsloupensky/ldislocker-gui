@@ -18,7 +18,7 @@ git clone
 sudo sh install.sh
 
 Add your account into group dislock and relogon.
-Then you can run this tool as /usr/share/ldislock-gui
+Then you can run this tool as /usr/share/ldislocker-gui
 
 
 
