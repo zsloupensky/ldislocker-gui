@@ -8,6 +8,14 @@ Thanks for inspiration :-)
 
 install/ using:
 
+Firstly install dislocker tools: 
+
+apt install dislocker
+
+or 
+
+yum install dislocker
+
 
 ## run script ldislocker-gui as root:
 
