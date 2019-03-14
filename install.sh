@@ -12,4 +12,4 @@ chown root:dislock /usr/local/bin/ldislocker-gui
 chmod 4750 /usr/local/bin/ldislocker-gui
 
 echo "add your account into group dislock"
-pip install python-tk
+

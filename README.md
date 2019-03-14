@@ -8,13 +8,13 @@ Thanks for inspiration :-)
 
 install/ using:
 
-Firstly install dislocker tools: 
+Firstly install dislocker tools and python-tk: 
 
-apt install dislocker
+apt install dislocker python-tk
 
 or 
 
-yum install dislocker
+yum install dislocker python-tk
 
 
 ## run script ldislocker-gui as root:
