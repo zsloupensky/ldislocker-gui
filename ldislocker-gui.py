@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#!/usr/bin/python
 import psutil
 from subprocess import call, Popen, PIPE
 import os
@@ -49,7 +49,9 @@ class DislockerGUI():
             raise Exception(stdout)
     def __get_disks(self):
         devices=[]
-        cmd='dislocker-find'
+        #cmd='dislocker-find'
+        # command "dislocker-find" doesn't work on several distribution (Ubuntu, Debian). Command below back the same result but uses tool "dislocker-metadata"
+        cmd='for p in $(cat /proc/partitions | sed  \'s/ \+/:/g\' | cut -d: -f 5) ; do  t=$(dislocker-metadata -V /dev/$p | grep \'BitLocker metadata found and parsed\'); if [ ! -z "$t" ] ; then echo  /dev/$p; fi ; done; '
         p=Popen(cmd, stdout=PIPE, shell=True)
         stdout=p.stdout.read()
         [devices.append(dev) for dev in stdout.split('\n') if dev !='']

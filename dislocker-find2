@@ -1,0 +1,3 @@
+#! /bin/bash
+# fixed tool dislocker-find
+for p in $(cat /proc/partitions | sed  's/ \+/:/g' | cut -d: -f 5) ; do  t=$(dislocker-metadata -V /dev/$p | grep 'BitLocker metadata found and parsed'); if [ ! -z "$t" ] ; then echo  /dev/$p; fi ; done  
